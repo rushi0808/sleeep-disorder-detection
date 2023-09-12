@@ -1,0 +1,24 @@
+body{
+    background-color: aqua;
+    text-align: center;
+}
+#feild:hover{
+    background-color: bisque;
+}
+#feild{
+    width: 200px;
+    height: auto;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 20px;
+}
+#sel_feild:hover{
+    background-color: bisque;
+}
+#sel_feild{
+    width: 150px;
+    height: auto;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 20px;
+}

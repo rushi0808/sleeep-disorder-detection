@@ -1,4 +1,12 @@
-Flask
-numpy
 pandas
+numpy
+matplotlib
+seaborn
+statsmodels
 scikit-learn
+notebook
+Flask
+python-box
+PyYAML
+ensure
+-e .

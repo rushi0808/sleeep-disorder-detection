@@ -4,7 +4,7 @@ import pickle
 import numpy as np
 from flask import Flask, jsonify, render_template, request
 
-app = Flask(__name__, template_folder="tamplates", static_folder="staticFiles")
+app = Flask(__name__, template_folder="templates", static_folder="staticFiles")
 model = pickle.load(open(r"./model/model.pkl", "rb"))
 
 
@@ -28,16 +28,12 @@ def predict():
     elif prediction == 1:
         return render_template(
             "index.html",
-            prediction_text="You have sleep Apnea Please Visit a doctor!".format(
-                prediction
-            ),
+            prediction_text="You have sleep Apnea Please Visit a doctor!".format(prediction),
         )
     else:
         return render_template(
             "index.html",
-            prediction_text="You have Insomnia Please Visit a doctor!".format(
-                prediction
-            ),
+            prediction_text="You have Insomnia Please Visit a doctor!".format(prediction),
         )
 
 

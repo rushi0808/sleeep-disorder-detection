@@ -1,12 +1,96 @@
 {% extends 'base.html' %}
+
 {% block title %}
 Home
 {% endblock %}
-{% block content %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
-<link rel="stylesheet" href="{{ url_for('static', filename='css/mediaquries.css') }}">
 
-<h1>Home</h1>
+{% block content %}
+
+{% block link %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css' ) }}">
+{% endblock %}
+
+<div class="home-title">
+    <h1>Home</h1>
+</div>
+
+<div class="home-content">
+    <div class="content-title">
+        <h2>Hello and welcome to sleep disorder detection!</h2>
+    </div>
+    <div class="text-image">
+        <div class="section_img">
+            <img src="{{ url_for('static', filename='images/sleeping-image.png' ) }}" alt="sleeping-img">
+        </div>
+        <div class="content_text">
+            <h3><span>Overview</span></h3>
+            <p>
+                Sleep plays a vital role in good health and well-being throughout your life. The way you feel while you
+                are awake depends in part on what happens while you are sleeping. During sleep, your body is working to
+                support healthy brain function and maintain your physical health.
+                <br>
+                Despite all the good aspects of sleep we tend to ignore them due to the technology or some other
+                reason's like jobs, working for more than we can handle and eventually our ignorance comes back to us
+                with some serious disorder's called <span>apnea</span> and <span>insomnia</span>.
+            </p>
+        </div>
+    </div>
+    <div class="content-title1">
+        <h2>So what is sleep apnea and insomnia?</h2>
+    </div>
+    <div class="text-image1">
+        <div class="content_text1">
+            <h3>What is <span>Sleep Apnea?</span></h3>
+            <p>
+                Sleep apnea is a disorder that causes you to stop breathing while asleep. Your brain tries to protect
+                you by waking you up enough to breathe, but this prevents restful, healthy sleep. Over time, this
+                condition can cause serious complications. However, this condition is often very manageable, especially
+                with close adherence to prescribed treatments.
+            </p>
+            <h3><span>Overview</span></h3>
+            <p>
+                Sleep apnea is a condition that causes you to stop breathing while you're sleeping. The word "apnea"
+                comes from the Greek word for "breathless." Sleep apnea happens because you stop breathing in your
+                sleep. This happens either because of blockage of your airway (obstructive sleep apnea) or because your
+                brain doesn't correctly control your breathing (central apnea).
+                <br>
+                The resulting lack of oxygen activates a survival reflex that wakes you up just enough to resume
+                breathing. While that reflex keeps you alive, it also interrupts your sleep cycle. That prevents restful
+                sleep and can have other effects, including putting stress on your heart that can have potentially
+                deadly consequences.
+            </p>
+        </div>
+        <div class="section_img1">
+            <img src="{{ url_for('static', filename='images/sleep-apnea.jpg' ) }}" alt="sleep-apnea-image">
+        </div>
+    </div>
+    <div class="text-image2">
+        <div class="section_img2">
+            <img src="{{ url_for('static', filename='images/sleep-insomnia.jpg' ) }}" alt="sleep-apnea-image">
+        </div>
+        <div class="content_text2">
+            <h3>What is <span>Sleep Insomnia?</span></h3>
+            <p>
+                Insomnia is when you experience disruptions in how you feel or function because you aren't sleeping well
+                or sleeping enough. About 10% of the world's population experience insomnia that qualifies as a medical
+                condition. It's usually not dangerous, and there are many ways — including medications and mental health
+                options — to treat it.
+            </p>
+            <h3><span>Overview</span></h3>
+            <p>
+                Insomnia is when you aren't sleeping as you should. That can mean you aren't sleeping enough, you aren't
+                sleeping well or you're having trouble falling or staying asleep. For some people, insomnia is a minor
+                inconvenience. For others, insomnia can be a major disruption. The reasons why insomnia happens can vary
+                just as widely.
+                <br>
+                Your body needs sleep for many reasons (and science is still unlocking an understanding of why sleep is
+                so important to your body). Experts do know that when you don’t sleep enough, it can cause sleep
+                deprivation, which is usually unpleasant (at the very least) and keeps you from functioning at your
+                best.
+            </p>
+        </div>
+    </div>
+</div>
 
 {% block javascript %}
 <script src="{{ url_for('static', filename='js/script.js')}}"></script>

@@ -1,0 +1,15 @@
+/* General */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto:wght@400;500&display=swap');
+
+.about-title {
+    display: block;
+    background-color: #b6d0e2;
+    text-align: center;
+}
+
+h1 {
+    padding: 5px;
+    font-size: 2rem;
+    font-weight: 200;
+}

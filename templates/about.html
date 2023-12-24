@@ -1,7 +1,21 @@
 {% extends 'base.html' %}
+
 {% block title %}
 About
 {% endblock %}
+
 {% block content %}
-<h1>About</h1>
+
+{% block link %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/about.css' ) }}">
+{% endblock %}
+
+<div class="about-title">
+    <h1>About</h1>
+</div>
+
+{% block javascript %}
+<script src="{{ url_for('static', filename='js/script.js')}}"></script>
+{% endblock %}
+
 {% endblock %}

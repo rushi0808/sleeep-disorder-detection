@@ -2,14 +2,7 @@ import math
 import pickle
 
 import numpy as np
-from flask import (
-    Flask,
-    redirect,
-    render_template,
-    request,
-    send_from_directory,
-    url_for,
-)
+from flask import Flask, redirect, render_template, request, send_from_directory
 
 app = Flask(__name__)
 
@@ -29,9 +22,14 @@ def home():
     return render_template("home.html")
 
 
-@app.route("/detect")
+@app.route("/detect", methods=["GET", "POST"])
 def detect():
-    return render_template("detect.html")
+    if request.method == "POST":
+        user_data = request.form.items()
+        user_data = list(user_data)
+        return render_template("detect.html", user_prediction=user_data)
+    elif request.method == "GET":
+        return render_template("detect.html")
 
 
 @app.route("/about")
@@ -40,4 +38,4 @@ def about():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8080, debug=True)
+    app.run(host="0.0.0.0", debug=True)

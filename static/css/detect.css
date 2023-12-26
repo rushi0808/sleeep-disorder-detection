@@ -57,19 +57,22 @@ form {
 }
 
 label {
-    padding: 3px;
+    position: relative;
+    display: inline-block;
+    padding: 5px;
     height: 30px;
-    width: 210px;
-    text-align: center;
+    width: 220px;
     font-size: 1.2rem;
+    text-align: center;
 }
 
 input,
 select {
     box-sizing: border-box;
-    height: 30px;
+    height: 33px;
     width: 210px;
     text-align: center;
+    font-size: 0.9rem;
     border: 2px black solid;
     border-radius: 3px;
 }
@@ -78,4 +81,48 @@ h3 {
     text-align: center;
     font-size: 1.1rem;
     font-weight: 200;
+}
+
+.submit__button {
+    display: flex;
+    justify-content: center;
+}
+
+label .tooltip {
+    display: block;
+    position: absolute;
+    visibility: hidden;
+    transform: translate(3%, -3.5rem);
+    background-color: black;
+    height: 20px;
+    width: 200px;
+    color: white;
+    font-size: 0.9rem;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+}
+
+label .tooltip::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    border: 10px solid black;
+    border-color: #000 #0000 #0000 #0000;
+}
+
+#tooltipText {
+    display: flex;
+    justify-content: center;
+}
+
+label:hover .tooltip {
+    visibility: visible;
+}
+
+.section__output {
+    padding-top: 2rem;
 }

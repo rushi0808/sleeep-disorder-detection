@@ -25,11 +25,14 @@ Detect
             <div class="form__section">
                 <div class="section__labels">
                     <!-- Gender label -->
-                    <label for="Gender">Gender</label>
+                    <label for="Gender"> Gender <div class="tooltip"><span id="tooltipText"> Select Gender </span></div>
+                    </label>
                     <!-- Age label -->
-                    <label for="Age">Age</label>
+                    <label for="Age"> Age <div class="tooltip"><span id="tooltipText"> Enter Age </span>
+                        </div></label>
                     <!-- Occupation label -->
-                    <label for="Occupation">Occupation</label>
+                    <label for="Occupation"> Occupation <div class="tooltip"><span id="tooltipText"> Select Occupation
+                            </span></div></label>
                 </div>
                 <div class="section__inputs">
                     <select name="Gender" id="Gender">
@@ -55,56 +58,74 @@ Detect
             <div class="form__section">
                 <div class="section__labels">
                     <!-- Sleep Duration -->
-                    <label for="Sleep Duration">Sleep Duration</label>
+                    <label for="Sleep Duration"> Sleep Duration <div class="tooltip"><span id="tooltipText"> Sleep Hours
+                            </span></div></label>
                     <!-- Quality of Sleep -->
-                    <label for="Quality of Sleep">Quality of Sleep</label>
+                    <label for="Quality of Sleep"> Quality of Sleep <div class="tooltip"><span id="tooltipText"> You'r
+                                sleep 0 - 10
+                            </span></div></label>
                     <!-- Physical Activity Level -->
-                    <label for="Physical Activity Level">Physical Activity Level</label>
+                    <label for="Physical Activity Level"> Physical Activity Level <div class="tooltip"><span
+                                id="tooltipText"> You'r physical
+                                activity 0 - 100 </span></div></label>
                 </div>
                 <div class="section__inputs">
-                    <input type="number" step="0.1" name="Sleep Duration" />
-                    <input type="number" min="1" max="10" name="Quality of Sleep" />
-                    <input type="number" min="10" max="100" step="5" name="Physical Activity Level" />
+                    <input type="number" min="0.0" max="24.0" step="0.1" name="Sleep Duration" />
+                    <input type="number" min="0" max="10" name="Quality of Sleep" />
+                    <input type="number" min="0" max="100" step="1" name="Physical Activity Level" />
                 </div>
             </div>
             <div class="form__section">
                 <div class="section__labels">
                     <!-- Stress Level -->
-                    <label for="Stress Level">Stress Level</label>
+                    <label for="Stress Level"> Stress Level <div class="tooltip"><span id="tooltipText"> You'r Stress
+                                level 0 -
+                                10</span></div></label>
                     <!-- BMI Category -->
-                    <label for="BMI Category">BMI Category</label>
+                    <label for="BMI Category"> BMI Category <div class="tooltip"><span id="tooltipText"> Select BMI
+                                Category </span></div></label>
                     <!-- Daily Steps -->
-                    <label for="Daily Steps">Daily Steps</label>
+                    <label for="Daily Steps"> Daily Steps <div class="tooltip"><span id="tooltipText"> You'r Daily steps
+                                0 - 10000
+                            </span></div></label>
                 </div>
                 <div class="section__inputs">
-                    <input type="number" min="1" max="10" step="1" name="Stress Level" />
+                    <input type="number" min="0" max="10" step="1" name="Stress Level" />
                     <select name="BMI Category" id="BMI Category">
                         <option value="Normal">Normal</option>
                         <option value="Normal Weight">Normal Weight</option>
                         <option value="Overweight">Overweight</option>
                         <option value="Obese">Obese</option>
                     </select>
-                    <input type="number" min="1000" max="10000" step="1000" name="Daily Steps" />
+                    <input type="number" min="0" max="10000" step="1" name="Daily Steps" />
                 </div>
             </div>
             <div class="form__section">
                 <div class="section__labels">
                     <!-- Systolic blood pressure -->
-                    <label for="Systolic blood pressure">Systolic blood pressure</label>
+                    <label for="Systolic blood pressure">Systolic blood pressure <div class="tooltip"><span
+                                id="tooltipText"> You'r Systolic
+                                BP </span></div></label>
                     <!--  Diastolic blood pressure -->
-                    <label for="Diastolic blood pressure">Diastolic blood pressure</label>
+                    <label for="Diastolic blood pressure">Diastolic blood pressure <div class="tooltip"><span
+                                id="tooltipText"> You'r
+                                Diastolic BP </span></div></label>
                     <!-- Heart Rate -->
-                    <label for="Heart Rate">Heart Rate</label>
+                    <label for="Heart Rate"> Heart Rate <div class="tooltip"><span id="tooltipText"> You'r Heart Rate
+                            </span></div></label>
                 </div>
                 <div class="section__inputs">
-                    <input type="number" min="10" max="200" step="5" name="Systolic blood pressure" />
-                    <input type="number" min="10" max="200" step="5" name="Diastolic blood pressure" />
-                    <input type="number" min="10" max="100" step="1" name="Heart Rate" />
+                    <input type="number" min="0" max="200" step="1" name="Systolic blood pressure" />
+                    <input type="number" min="0" max="200" step="1" name="Diastolic blood pressure" />
+                    <input type="number" min="0" max="100" step="1" name="Heart Rate" />
                 </div>
+            </div>
+            <div class="submit__button">
+                <input type="submit" id="submit-btn" value="Submit" />
             </div>
         </form>
         <div class="section__output">
-            <h3>{{ User_prediction }}</h3>
+            <h3>{{ user_prediction }}</h3>
         </div>
     </div>
 </div>

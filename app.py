@@ -1,8 +1,6 @@
-import math
-import pickle
-
-import numpy as np
 from flask import Flask, redirect, render_template, request, send_from_directory
+
+from sleep_disorder.pipeline.stage_05_prediction import UserPredictionPipeline
 
 app = Flask(__name__)
 
@@ -25,9 +23,10 @@ def home():
 @app.route("/detect", methods=["GET", "POST"])
 def detect():
     if request.method == "POST":
-        user_data = request.form.items()
-        user_data = list(user_data)
-        return render_template("detect.html", user_prediction=user_data)
+        user_input = request.form.items()
+        user_prediction_pipe = UserPredictionPipeline()
+        user_prediction = user_prediction_pipe.main(user_input=list(user_input))
+        return render_template("detect.html", user_prediction=user_prediction)
     elif request.method == "GET":
         return render_template("detect.html")
 

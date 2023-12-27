@@ -24,3 +24,7 @@ model_build_evaluate:
   train_data_file: artifacts/data_transform/train_data.csv
   test_data_file: artifacts/data_transform/test_data.csv
   model_results_file: artifacts/model_evaluation/model_evaluation.txt
+
+prediction:
+  model_file: model/model.pkl
+  preprocessor_file: preprocessor/preprocessor.pkl

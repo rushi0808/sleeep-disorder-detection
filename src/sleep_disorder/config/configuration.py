@@ -4,6 +4,7 @@ from sleep_disorder.entity import (
     DataTransformConfig,
     DataValidationConfig,
     ModelBuildEvaluateConfig,
+    PredictionConfig,
 )
 from sleep_disorder.utils.common import create_directories, read_yaml
 
@@ -63,3 +64,10 @@ class ConfigurationManager:
         )
 
         return model_build_evaluate_config
+
+    def get_prediction_config(self) -> PredictionConfig:
+        config = self.config.prediction
+
+        prediction_config = PredictionConfig(model_file=config.model_file, preprocessor_file=config.preprocessor_file)
+
+        return prediction_config

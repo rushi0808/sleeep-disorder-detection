@@ -33,3 +33,9 @@ class ModelBuildEvaluateConfig:
     train_data_file: Path
     test_data_file: Path
     model_results_file: Path
+
+
+@dataclass
+class PredictionConfig:
+    model_file: Path
+    preprocessor_file: Path

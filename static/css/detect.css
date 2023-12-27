@@ -91,7 +91,7 @@ label .tooltip {
     display: block;
     position: absolute;
     visibility: hidden;
-    transform: translate(3%, -3.8rem);
+    transform: translate(0%, -3.8rem);
     background-color: black;
     height: 20px;
     width: 200px;

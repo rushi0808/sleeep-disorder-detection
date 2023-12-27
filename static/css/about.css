@@ -13,3 +13,87 @@ h1 {
     font-size: 2rem;
     font-weight: 200;
 }
+
+.about-content {
+    padding-top: 4vh;
+    height: 96vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+.content-title {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 200;
+}
+
+/* content text */
+
+.content-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.content-text div {
+    align-self: center;
+    width: 60%;
+}
+
+.text P {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.my_info {
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.title {
+    text-align: center;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.name,
+.email {
+    display: flex;
+    justify-content: center;
+}
+
+h3 {
+    font-weight: 200;
+}
+
+.github,
+.linkedin {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.github img,
+a {
+    height: 50px;
+    width: fit-content;
+    align-self: center;
+}
+
+.linkedin img,
+a {
+    height: 50px;
+    width: fit-content;
+    align-self: center;
+}

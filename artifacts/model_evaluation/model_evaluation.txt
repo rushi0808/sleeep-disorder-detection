@@ -1,0 +1,9 @@
+                         Name  Accuracy    Recall  Precision  F1_score
+0          LogisticRegression  0.849558  0.836260   0.827310  0.829630
+1      DecisionTreeClassifier  0.946903  0.934957   0.947578  0.940482
+2      RandomForestClassifier  0.946903  0.934957   0.947578  0.940482
+3  GradientBoostingClassifier  0.946903  0.936629   0.943456  0.939908
+4          AdaBoostClassifier  0.831858  0.760678   0.861782  0.780256
+5                         SVC  0.566372  0.333333   0.188791  0.241055
+6               XGBClassifier  0.946903  0.936629   0.943456  0.939908
+7          CatBoostClassifier  0.946903  0.936629   0.943456  0.939908

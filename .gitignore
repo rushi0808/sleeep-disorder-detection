@@ -159,9 +159,4 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-
-artifacts/*
-logs/*
-preprocessor/*
-model/*
-catboost_info/*
+# Project directorys and files

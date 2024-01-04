@@ -5,6 +5,7 @@ seaborn
 statsmodels
 scikit-learn
 xgboost
+catboost
 notebook
 Flask
 python-box
